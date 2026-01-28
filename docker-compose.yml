@@ -1,0 +1,17 @@
+services:
+  localstack:
+    image: localstack/localstack:3.5
+    container_name: studentcard-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=sqs,sns,s3,events,dynamodb,kinesis
+      - DEBUG=0
+    volumes:
+      - "./docker/localstack-init:/etc/localstack/init/ready.d"
+
+  redis:
+    image: redis:7.2
+    container_name: studentcard-redis
+    ports:
+      - "6379:6379"
