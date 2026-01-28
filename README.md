@@ -1,3 +1,11 @@
+## Local Development
+
+See: docs/local-development.md
+
+## Testing
+
+See: docs/testing.md
+
 # Student Card Platform - AWS Lambda (Local SQS + DLQ + Idempotency)
 
 This is a single Spring Boot Maven project that demonstrates a real-world flow:
